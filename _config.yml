@@ -1,13 +1,13 @@
-title: Parchment
-author: pro-panda
-subtitle: The life of a frustrated engineer
+title: Roi's Digital Territory
+author: roijaboi
+subtitle: My life as you know it.
 
-url: "https://rahulbothra.com"
-baseurl: "/parchment"
+url: "https://www.roijacob.com"
+baseurl: "/writings"
 
 footer_only_homepage: true
-footer_url: "https://github.com/rhl-bthr"
-footer_text: "Theme by rhl-bthr"
+footer_url: "https://github.com/roijacob"
+footer_text: "Digital Home of Roi Jacob"
 
 profile-picture: assets/profile.png
 favicon_location: assets/favicon.ico
@@ -21,4 +21,4 @@ navbar:
  - name: "About"
    link: "about"
  - name: "Resume"
-   absolute-link: "https://rahulbothra.com/cv.pdf"
+   absolute-link: "https://github.com/roijacob"
