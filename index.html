@@ -2,21 +2,32 @@
 layout: default
 ---
 
+<!-- Initialize flag to track if any posts exist -->
 {% assign has_post = false %}
+
+<!-- Loop through all posts in the site -->
 {% for post in site.posts %}
+    
+    <!-- Skip private posts -->
     {% if post.private == true %}
         {% continue %}
     {% endif %}
+    
+    <!-- Create card container for each post -->
     <div class="post-card">
-        <a class="title" href="{{site.baseurl}}{{ post.url }}">
+        
+        <!-- Post title with link to full post -->
+        <a class="title" href="{{site.baseurl}}{{ post.url }}" style="font-weight: 300">
             {{ post.title }}
         </a>
 
+        <!-- Post metadata: date and tags -->
         <div class="details">
             <b>{{ post.date | date: "%d %B %Y" }}</b>
             <br>
             {% if post.tags %}
                 <b>[</b>
+                <!-- Loop through and display all post tags -->
                 {% for tag in post.tags %}
                     <a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>{% if forloop.last == false %},{% endif %}
                 {% endfor %}
@@ -24,15 +35,23 @@ layout: default
             {% endif %}
         </div>
 
+        <!-- Post subtitle/description -->
         <div class="subtitle">
             {{ post.subtitle }}
         </div>
     </div>
+    
+    <!-- Add horizontal line between posts (except for last post) -->
     {% if forloop.last == false %}
-    <hr>
+        <hr>
     {% endif %}
+
+    <!-- Flags that valid posts exist to prevent "no posts" message -->
     {% assign has_post = true %}
+
 {% endfor %}
+
+<!-- Display message if no posts are found -->
 {% if has_post == false %}
-    <div class="no-post">I've lost the ink pot. Check back later...</div>
+    <div class="no-post">Where the heck are my files?! Check back later.</div>
 {% endif %}

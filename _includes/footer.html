@@ -1,8 +1,13 @@
+<!-- Footer section -->
 <div class="footer">
+    <!-- Only show footer content on homepage if footer_only_homepage is true -->
     {% if page.url == "/" and site.footer_only_homepage %}
+        <!-- Horizontal line separator -->
         <hr>
+        <!-- Footer link with configurable URL and text from site settings -->
         <a href="{{ site.footer_url }}">{{ site.footer_text }}</a>
     {% else %}
+        <!-- Add line break if not homepage or if footer_only_homepage is false -->
         <br>
     {% endif %}
 </div>

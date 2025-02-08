@@ -2,12 +2,20 @@
 layout: default
 ---
 
+<!-- Subtitle section containing post tags -->
 <div class="page-subtitle">
+    <!-- Iterate through all tags associated with the page -->
     {% for tag in page.tags %}
+        
+        <!-- Add opening bracket before the first tag -->
         {% if page.tags.first == tag %}
             <b>[</b>
         {% endif %}
-        <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+        
+        <!-- Create clickable link for each tag that points to its archive page -->
+        <a href="{{ site.url }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+        
+        <!-- Add closing bracket after last tag, otherwise add comma separator -->
         {% if page.tags.last == tag %}
             <b>]</b>
         {% else %}
@@ -16,4 +24,5 @@ layout: default
     {% endfor %}
 </div>
 
+<!-- Display the main content of the page -->
 {{content}}

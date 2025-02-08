@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Include header component with meta tags, title, CSS, etc. -->
 {% include head.html %}
 
 <body>
+    <!-- Main container wrapper -->
     <div class="container">
+        <!-- Include navigation bar component -->
         {% include navbar.html %}
+        
+        <!-- Page title section -->
         <div class="page-title">
             {{page.title}}
         </div>
+        
+        <!-- Main content area -->
         <div class="content">
             {{ content }}
         </div>
+        
+        <!-- Include footer component -->
         {% include footer.html %}
     </div>
 </body>
