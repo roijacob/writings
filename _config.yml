@@ -1,16 +1,16 @@
-title: Parchment
-author: pro-panda
-subtitle: The life of a frustrated engineer
+title: Roi's Digital Territory
+author: roijacob
+subtitle: Digital Real Estate of Roi Jacob Olfindo.
 
-url: "https://rahulbothra.com"
-baseurl: "/parchment"
+url: "https://www.roijacob.com"
+baseurl: ""
 
 footer_only_homepage: true
-footer_url: "https://github.com/rhl-bthr"
-footer_text: "Theme by rhl-bthr"
+footer_url: "https://www.linkedin.com/in/roi-jacob-olfindo"
+footer_text: "Created by: Roi Jacob Olfindo"
 
 profile-picture: assets/profile.jpg
-favicon_location: assets/favicon.ico
+favicon_location: assets/icon.png
 
 permalink: /:year-:month-:day-:title/
 sass:
@@ -20,5 +20,5 @@ sass:
 navbar:
  - name: "About"
    link: "about"
- - name: "Resume"
-   absolute-link: "https://rahulbothra.com/cv.pdf"
+ - name: "GitHub"
+   absolute-link: "https://github.com/roijacob"
